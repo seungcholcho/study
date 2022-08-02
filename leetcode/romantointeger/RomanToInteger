@@ -1,0 +1,31 @@
+class Solution(object):
+    def romanToInt(self, s):
+        total = 0
+        arabic_number = []
+        for letter in s:
+            if letter == 'I':
+                arabic_number.append(1)
+            elif letter == 'V':
+                arabic_number.append(5)
+            elif letter == 'X':
+                arabic_number.append(10)
+            elif letter == 'L':
+                arabic_number.append(50)
+            elif letter == 'C':
+                arabic_number.append(100)
+            elif letter == 'D':
+                arabic_number.append(500)
+            else:
+                arabic_number.append(1000)
+
+        for i in range(len(arabic_number)):
+            if (i+1 < len(arabic_number)) and (arabic_number[i] < arabic_number[i+1]):
+                total -= arabic_number[i]
+            else:
+                total += arabic_number[i]
+        return total
+
+s1 = Solution()
+roman = input("input roman number: ")
+print(s1.romanToInt(roman))
+
