@@ -36,7 +36,7 @@ class Solution(object):
             tempNode = tempNode.next
             
 s1 = Solution()
-node = ListNode(1)
+node = ListNode(1) 
 
 node.insert(2)
 node.insert(3)
