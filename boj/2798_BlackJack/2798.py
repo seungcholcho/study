@@ -3,8 +3,7 @@ input = sys.stdin.readline
 s = 0
 c = []
 n = input().split()
-p = int(n[0])
-b = int(n[1])
+p, b = int(n[0]), int(n[1])
 n = input().split()
 for i in range(0,p):
     c.append(int(n[i]))
